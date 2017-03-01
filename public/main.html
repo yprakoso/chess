@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess</title>
+  <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+  <script type="text/javascript" src="js/chessboard-0.3.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="board" style="width: 400px"></div>
+  <input type="button" id="startBtn" value="Start" />
+  <input type="button" id="clearBtn" value="Clear" />
+  <script>var board = ChessBoard('board', {
+  draggable: true,
+  dropOffBoard: 'trash',
+  sparePieces: true
+});
+$('#startBtn').on('click', board.start);
+$('#clearBtn').on('click', board.clear);</script>
+</body>
+</html>
